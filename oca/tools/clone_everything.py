@@ -3,11 +3,11 @@
 import argparse
 import subprocess
 
-from oca_projects import OCA_REPOSITORY_NAMES, url
 import os
 
 
 def clone(organization_remotes=None):
+    from oca_projects import OCA_REPOSITORY_NAMES, url
     for project in OCA_REPOSITORY_NAMES:
         cmd = ['git', 'clone', '--quiet', url(project), project]
         try:
